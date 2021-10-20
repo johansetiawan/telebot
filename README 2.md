@@ -7,17 +7,17 @@ This is developed as one of [Algoritma Academy](https://algorit.ma/) Data Analyt
 The maximum score you will obtain from this project is 16 points:  
 
 - **Setup (3 points)**
-    - [ ] **Prepare virtual environment**
+    - [x] **Prepare virtual environment**
       - Please provide `requirements.txt` on the project folder.
-    - [ ] **Create Telegram bot API via BotFather**
+    - [x] **Create Telegram bot API via BotFather**
       - Please provide your bot link when making a submission.
-    - [ ] **Using `os.environ` to secure token**
+    - [x] **Using `os.environ` to secure token**
       - Important: Make sure you do not push `.env` to your GitHub Repository.
 
 - **Chatbot functionalities**
     - **Basic function (3 points)**
-        - [ ] **Command `/start` or `/help`**: correctly respond to user trigger
-        - [ ] **Command `/about`**: provide developer information
+        - [x] **Command `/start` or `/help`**: correctly respond to user trigger
+        - [x] **Command `/about`**: provide developer information
         - [ ] **Function `echo_all()`**: using `emoji`
     - **Summary text report: `/summary` (3 points)**
         - [ ] Perform necessary **data wrangling** steps to extract information

@@ -25,17 +25,17 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     # TO DO: chat_id, full_name, message_text
-    chat_id = ___
+    chat_id = message.from_user.id
 
-    first_name = ___
-    last_name = ___
+    first_name = message.from_user.first_name
+    last_name = message.from_user.first_name
     full_name = f'{first_name} {last_name}' if last_name is not None else first_name
     
     # TO DO: subtitute text with variable
     with open('template_text/welcome.txt', mode='r', encoding='utf-8') as f:
         content = f.read()
         temp = Template(content)
-        welcome = temp.substitute(___ = ___)
+        welcome = temp.substitute(FULL_NAME = full_name)
 
     bot.send_message(
         chat_id,
@@ -46,16 +46,16 @@ def send_welcome(message):
 @bot.message_handler(commands=['about'])
 def send_about(message):
     # TO DO: chat_id
-    chat_id = ___
+    chat_id = chat_id
 
     # TO DO: subtitute text with static values
     with open('template_text/about.txt', mode='r', encoding='utf-8') as f:
         content = f.read()
         temp = Template(content)
         about = temp.substitute(
-            ___ = ___,
-            ___ = ___,
-            ___ = ___
+            STUDENT_NAME = "Johan Setiawan",
+            BATCH_ACADEMY = "Phoenix Day Online",
+            GITHUB_REPO_LINK = "https://github.com/johansetiawan/telebot"
         )
 
     bot.send_message(
