@@ -210,15 +210,16 @@ def send_about(message):
 #         ask_id_plot(message)
 
 
-# # -------------------- CHECKPOINT 4 --------------------
-# @bot.message_handler(func=lambda message: True)
-# def echo_all(message):
-#     # TO DO: emoji
-#     with open('template_text/default.txt', mode='r', encoding='utf-8') as f:
-#         temp = Template(f.read())
-#         default = temp.substitute(___ = ___)
+# -------------------- CHECKPOINT 4 --------------------
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+    # TO DO: emoji
+    my_emoji = emoji.emojize(':cry:')
+    with open('template_text/default.txt', mode='r', encoding='utf-8') as f:
+        temp = Template(f.read())
+        default = temp.substitute(EMOJI = my_emoji)
         
-#     bot.reply_to(message, default)
+    bot.reply_to(message, default)
 
 if __name__ == "__main__":
     bot.polling()
