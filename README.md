@@ -20,12 +20,12 @@ The maximum score you will obtain from this project is 16 points:
         - [x] **Command `/about`**: provide developer information
         - [x] **Function `echo_all()`**: using `emoji`
     - **Summary text report: `/summary` (3 points)**
-        - [ ] Perform necessary **data wrangling** steps to extract information
-        - [ ] Perform the right **mathematical calculation**
-        - [ ] Send **summary message** using `Template`
+        - [x] Perform necessary **data wrangling** steps to extract information
+        - [x] Perform the right **mathematical calculation**
+        - [x] Send **summary message** using `Template`
     - **Visualization report: `/plot` (4 points)**
-        - [ ] Perform necessary **data wrangling** steps to extract information
-        - [ ] Perform the right **mathematical calculation**
+        - [x] Perform necessary **data wrangling** steps to extract information
+        - [x] Perform the right **mathematical calculation**
         - [ ] **Send plot** with caption
         - [ ] **Tidy** plot layout (title, label, color, size)
 - **Application deployment (3 points)**
