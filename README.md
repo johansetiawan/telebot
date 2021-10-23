@@ -26,12 +26,12 @@ The maximum score you will obtain from this project is 16 points:
     - **Visualization report: `/plot` (4 points)**
         - [x] Perform necessary **data wrangling** steps to extract information
         - [x] Perform the right **mathematical calculation**
-        - [ ] **Send plot** with caption
-        - [ ] **Tidy** plot layout (title, label, color, size)
+        - [x] **Send plot** with caption
+        - [x] **Tidy** plot layout (title, label, color, size)
 - **Application deployment (3 points)**
-    - [ ] Using **`Flask`** to serve the chatbot as an application
-    - [ ] **Deploy** to Heroku using GitHub or Heroku CLI
-    - [ ] Deployed chatbot run smoothly **without error**
+    - [x] Using **`Flask`** to serve the chatbot as an application
+    - [x] **Deploy** to Heroku using GitHub or Heroku CLI
+    - [x] Deployed chatbot run smoothly **without error**
 
 ## Project File Structure
 
