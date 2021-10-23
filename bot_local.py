@@ -84,7 +84,6 @@ def ask_id_summary(message):
     markup = telebot.types.ReplyKeyboardMarkup(one_time_keyboard=True)
     for i in unique_campaign:
         markup.add(i)
-    
     sent = bot.send_message(chat_id, 'Choose campaign to be summarized:', reply_markup=markup)
 
     bot.register_next_step_handler(sent, send_summary)
@@ -97,9 +96,10 @@ def send_summary(message):
     if selected_campaign_id in unique_campaign:
         # TO DO: find the range date
         df_campaign = df[df['campaign_id'] == selected_campaign_id]
+        
         start_date = df_campaign['reporting_date'].min().strftime(format='%d %b %Y')
         end_date = df_campaign['reporting_date'].max().strftime(format='%d %b %Y')
-       
+        
         # TO DO: perform calculation
         total_spent = df_campaign['spent'].sum().astype('int64')
         total_conversion = df_campaign['total_conversion'].sum().astype('int64')
@@ -114,12 +114,11 @@ def send_summary(message):
                 START_DATE = start_date,
                 END_DATE = end_date,
                 TOTAL_SPENT = f"${total_spent:,}",
-                    TOTAL_CONVERSION = f"{total_conversion:,}",
+                TOTAL_CONVERSION = f"{total_conversion:,}",
                 CPC = f"${cpc:,.1f}"
             )
 
         bot.send_message(chat_id, summary)
-    
     else:
         bot.send_message(chat_id, 'Campaign ID not found. Please try again!')
         ask_id_summary(message)
@@ -221,6 +220,7 @@ def echo_all(message):
     with open('template_text/default.txt', mode='r', encoding='utf-8') as f:
         temp = Template(f.read())
         default = temp.substitute(EMOJI = emoji.emojize(':hear_no_evil:', use_aliases=True))
+
     bot.reply_to(message, default)
 
 if __name__ == "__main__":
